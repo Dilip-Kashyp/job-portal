@@ -1,0 +1,39 @@
+$gold: #c4ae31;
+$topRibbonColor: #f1f2f4;
+$white: #fff;
+$filterSidebarBackgroundColor: #e6f2ff;
+$filterTagsBackgroundColor: #007aff1a;
+$filterTagsTextColor: #007aff;
+$appliedJobsBackgroundColor: #e8f4ff;
+$savedJobsBackgroundColor: #fff4e1;
+$jobAlertsBackgroundColor: #e6fae6;
+$blue: #1d4ed8;
+$green: #22c55e;
+$listTitleBackgroundColor: #f1f2f4;
+$listTitleTextColor: #767f8c;
+$cardHoverBorderColor: #007aff;
+$cardBorderColor: #fff;
+$errorColor: #e05151;
+$borderGreyColor: #e4e5e8;
+$lightBlue: #f5f9ff;
+
+:export {
+  gold: $gold;
+  topRibbonColor: $topRibbonColor;
+  white: $white;
+  filterSidebarBackgroundColor: $filterSidebarBackgroundColor;
+  filterTagsBackgroundColor: $filterTagsBackgroundColor;
+  filterTagsTextColor: $filterTagsTextColor;
+  appliedJobsBackgroundColor: $appliedJobsBackgroundColor;
+  savedJobsBackgroundColor: $savedJobsBackgroundColor;
+  jobAlertsBackgroundColor: $jobAlertsBackgroundColor;
+  blue: $blue;
+  green: $green;
+  listTitleBackgroundColor: $listTitleBackgroundColor;
+  listTitleTextColor: $listTitleTextColor;
+  cardHoverBorderColor: $cardHoverBorderColor;
+  cardBorderColor: $cardBorderColor;
+  errorColor: $errorColor;
+  borderGreyColor: $borderGreyColor;
+  lightBlue: $lightBlue;
+}
