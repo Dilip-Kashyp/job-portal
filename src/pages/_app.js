@@ -1,3 +1,4 @@
+import "../styles/_colour.module.scss"
 import "@/styles";
 
 export default function App({ Component, pageProps }) {
