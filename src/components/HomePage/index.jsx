@@ -1,42 +1,45 @@
-import { Paper, Stack, Container, Typography, Button } from "@/components";
+import { Stack, Container, Typography, Button, Input } from "@/components";
 import { HOME_PAGE_CONFIG } from "@/constants";
 import { useRouter } from "next/navigation";
+import { leftHome, rightHome, home } from "@/assets";
+import Image from "next/image";
+import FeatureJob from "./featureJob";
 
 function HomePage() {
-  const {
-    HOME_HEADER,
-    HOME_TITLE,
-    HOME_SUBHEADING,
-    LOGIN_BUTTON,
-    SIGN_BUTTON,
-  } = HOME_PAGE_CONFIG;
+  const { HOME_HEADER, HOME_TITLE, LOGIN_BUTTON, SIGN_BUTTON } =
+    HOME_PAGE_CONFIG;
   const route = useRouter();
   return (
-    <Container
-      containerProps={{
-        className: "mt-20 flex justify-center ",
-      }}
-    >
-      <Paper
-        paperProps={{
-          className: "p-10 w-[85%]",
-          elevation: 12,
+    <>
+      <Container
+        containerProps={{
+          className: "mt-32 flex flex-col justify-center gap-8",
         }}
       >
-        <Stack stackProps={{ className: "items-center" }}>
-          <Typography {...HOME_HEADER} />
-          <Typography {...HOME_TITLE} />
-          <Typography {...HOME_SUBHEADING} />
-          <Stack stackProps={{ gap: 6, marginTop: "40px", direction: "row" }}>
-            <Button {...LOGIN_BUTTON} onClick={() => route.push("/login")} />
-            <Button
-              {...SIGN_BUTTON}
-              onClick={() => route.push("/registration")}
-            />
+        <Stack stackProps={{ alignItems: "center", gap: 6 }}>
+          <Stack
+            stackProps={{ direction: "row", justifyContent: "space-between" }}
+          >
+            <Image src={leftHome.src} width={150} height={100} />
+            <Stack stackProps={{ textAlign: "center", width: "50%" }}>
+              <Typography {...HOME_HEADER} />
+            </Stack>
+            <Image src={rightHome.src} width={150} height={100} />
           </Stack>
+          <Typography {...HOME_TITLE} />
+          <Input
+            inputProps={{
+              placeholder: "Job Title, keywords......",
+              size: "medium",
+              variant: "standard",
+              sx: { minWidth: 500 },
+            }}
+          />
+          {/* <Image src={home.src} width={1000} height={600} /> */}
         </Stack>
-      </Paper>
-    </Container>
+        <FeatureJob />
+      </Container>
+    </>
   );
 }
 
